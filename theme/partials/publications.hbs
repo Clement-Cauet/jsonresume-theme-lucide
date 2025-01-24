@@ -1,57 +1,38 @@
 {{#if resume.publications.length}}
-<section class="section">
-  <header>
+<section id="publications" class="section">
     <h2 class='section-title'>Publications</h2>
-  </header>
-  <section id="publications">
     {{#each resume.publications}}
-    <section class="publication-item">
-      {{#if summary}}
-      <label for="publication-item-{{@index}}"></label>
-      {{/if}}
-
-      <header class="clear">
-         {{#if releaseDate}}
-        <span class="date">
-          {{MY releaseDate}}
-        </span>
+    <div class="publication-item">
+        {{#if releaseDate}}
+        <p class="date">
+            {{MY releaseDate}}
+        </p>
         {{/if}}
-        <div class="header-left">
-          {{#if name}}
-          <span class="name">
+        {{#if name}}
+        <p class="name">
             {{#if website}}
-            <span class="website">
-              <span class="fa-solid fa-up-right-from-square"></span>
-              <a target="_blank" href="{{website}}">{{name}}</a>
-            </span>
+            <a target="_blank" href="{{website}}">{{name}}</a>
             {{else}}
             {{name}}
             {{/if}}
-          </span>
-          {{/if}}
-          {{#if publisher}}
-          <span class="publisher">
-            in {{publisher}}
-          </span>
-          {{/if}}
-        </div>
-       
-      </header>
-      {{#if keywords.length}}
-      <ul class="keywords">
-        {{#each keywords}}
-        <li>{{.}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
-
-      <div class="item">
-        {{#if summary}}
-        <div class="summary">{{paragraphSplit summary}}</div>
+            {{#if publisher}}
+            <span>
+                in {{publisher}}
+            </span>
+            {{/if}}
+        </p>
         {{/if}}
-      </div>
-    </section>
+        {{#if summary}}
+        <p class="summary">{{paragraphSplit summary}}</p>
+        {{/if}}
+        {{#if keywords.length}}
+        <ul class="keywords">
+            {{#each keywords}}
+            <li>{{.}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
     {{/each}}
-  </section>
 </section>
 {{/if}}

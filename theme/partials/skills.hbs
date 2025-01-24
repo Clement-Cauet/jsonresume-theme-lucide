@@ -1,35 +1,33 @@
 {{#if resume.skills.length}}
-<section class="section">
-  <header>
+<section id="skills" class="section skills">
     <h2 class='section-title'>Skills</h2>
-  </header>
-  <section id="skills">
-    {{#each resume.skills}}
-    <div class="item">
-      {{#if name}}
-      <h3 class="name">
-        {{name}}
-      </h3>
-      {{/if}} 
-      {{#if level}}
-        <div class="level {{toLowerCase level}}">
-          {{#if levelDisplay}}
-            <em>{{levelDisplay}}</em>
-          {{else}}
-            <em>{{level}}</em>
-          {{/if}}
-          <div class="bar"></div>
+    <div class="skills-container">
+        {{#each resume.skills}}
+        <div class="card-container">
+            <div class="card skills-item">
+                <div class="card-header">
+                    {{#if name}}
+                    <p>{{name}}</p>
+                    {{/if}}
+                    {{#if level}}
+                    <div class="level {{toLowerCase level}}">
+                        <p class="level">{{level}}</p>
+                        <div class="bar"></div>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="card-content">
+                    {{#if keywords.length}}
+                    <ul class="list-tags">
+                        {{#each keywords}}
+                        <li class="tag">{{.}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </div>
+            </div>
         </div>
-      {{/if}}
-      {{#if keywords.length}}
-      <ul class="keywords">
-        {{#each keywords}}
-        <li>{{.}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
-    </div>
     {{/each}}
-  </section>
+    </div>
 </section>
 {{/if}}

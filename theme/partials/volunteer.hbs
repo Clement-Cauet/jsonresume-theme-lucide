@@ -1,79 +1,44 @@
 {{#if resume.volunteer.length}}
-<section class="section">
-  <header>
-    <h2 class='section-title'>Volunteer</h2>
-  </header>
-  <section id="volunteer">
+<section id="volunteer" class="section volunteer">
+    <h2 class='section-title'>Volunteer Experience</h2>
     {{#each resume.volunteer}}
-    <section class="volunteer-item">
-      {{#if organization}}
-
-      {{#if summary}}
-      <label for="volunteer-item-{{@index}}"></label>
-      {{/if}}
-
-      <header class="clear">
-        {{> date startDate=startDate endDate=endDate }}
-        <div class="header-left">
-          {{#if position}}
-          <div class="position">
-            {{position}}
-          </div>
-          {{/if}}
-          <div class="organization">
-            {{organization}}
-          </div>
+    <section class="section-item">
+        <div id="volunteer-header" class="section-header">
+            <div>
+                {{> date startDate=startDate endDate=endDate }}
+            </div>
+            <div>
+                {{#if position}}
+                <p class="position">{{position}}</p>
+                {{/if}}
+                <p class="organization">
+                    {{#if website}}
+                    <a target="_blank" href="{{website}}">{{organization}}</a>
+                    {{else}}
+                    {{organization}}
+                    {{/if}}
+                    {{#if location}}
+                    <span class="location">
+                        <span class="fa-solid fa-location-dot"></span>
+                        {{location}}
+                    </span>
+                    {{/if}}
+                </p>
+            </div>
         </div>
-       
-      </header>
-      {{/if}}
-      {{#if website}}
-      <div class="website">
-        <span class="fa-solid fa-up-right-from-square"></span>
-        <a target="_blank" href="{{website}}">{{website}}</a>
-      </div>
-      {{/if}}
-      {{#location}}
-      <span class="location">
-        <span class="fa-solid fa-location-dot"></span>
-        {{#if city}}
-        <span class="city">
-          {{city}},
-        </span>
-        {{/if}}
-        {{#if countryCode}}
-        <span class="countryCode">
-          ({{countryCode}})
-        </span>
-        {{/if}}
-        {{#if region}}
-        <span class="region">
-          {{region}}
-        </span>
-        {{/if}}
-      </span>
-      {{/location}}
-      {{#if keywords.length}}
-      <ul class="keywords">
-        {{#each keywords}}
-        <li>{{.}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
-      <div class="item">
-        {{#if summary}}
-        <div class="summary">{{paragraphSplit summary}}</div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-          <li>{{paragraphSplit .}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
-      </div>
+        <div id="volunteer-container" class="section-container">
+            {{#if summary}}
+            <div class="summary">{{paragraphSplit summary}}</div>
+            {{/if}}
+            {{#if highlights.length}}
+            <ul class="highlights">
+                {{#each highlights}}
+                <li>{{paragraphSplit .}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
     </section>
     {{/each}}
-  </section>
 </section>
 {{/if}}
