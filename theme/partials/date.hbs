@@ -1,10 +1,13 @@
 {{#if startDate}}
   <code class="date">
-    <span class="startDate">{{Y startDate}}</span>
     {{#if endDate}}
-      <span class="endDate">- {{Y endDate}}</span>
+      {{#if (eq (Y startDate) (Y endDate))}}
+        <span>{{Y startDate}}</span>
+      {{else}}
+        <span>{{Y startDate}} - {{Y endDate}}</span>
+      {{/if}}
     {{else}}
-      <span class="endDate">- Aujourd'hui</span>
+      <span>{{Y startDate}} - Aujourd'hui</span>
     {{/if}}
   </code>
 {{/if}}

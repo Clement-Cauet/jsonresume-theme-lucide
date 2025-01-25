@@ -14,13 +14,14 @@ const { nameSplit } = require(join(HELPERS, 'name-split.js'));
 const { MY, Y, DMY } = dateHelpers;
 
 Handlebars.registerHelper('birthDate', birthDate);
-Handlebars.registerHelper('MY', MY);  // Date: Month year eg. "Jul 2020"
-Handlebars.registerHelper('Y', Y);  // Date: Year eg. "2020"
+Handlebars.registerHelper('MY', MY);
+Handlebars.registerHelper('Y', Y);
 Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
 Handlebars.registerHelper('nameSplit', nameSplit);
+Handlebars.registerHelper('eq', function (a, b) { return a === b; });
 
 function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
