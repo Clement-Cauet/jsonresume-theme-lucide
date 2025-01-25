@@ -1,0 +1,21 @@
+{{#if resume.softSkills.length}}
+<section id="interests" class="section section-interests">
+    <h2 class="section-title sidebar-title">SOFT SKILLS</h2>
+    {{#each resume.softSkills}}
+    <div>
+        {{#if name}}
+        <p class="name">
+            {{name}}
+        </p>
+        {{/if}}
+        {{#if keywords.length}}
+        <ul class="list-tags">
+            {{#each keywords}}
+            <li class="tag keyword">{{.}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    {{/each}}
+</section>
+{{/if}}

@@ -164,8 +164,12 @@ h1 {
     padding-left: 0.7em;
     padding-right: 0.7em;
     white-space: nowrap;
-    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0.375rem;
+}
+
+.keyword {
+    font-size: 0.8rem;
 }
 
 /* Sidebar */
