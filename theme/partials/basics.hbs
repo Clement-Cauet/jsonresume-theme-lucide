@@ -6,40 +6,46 @@
 	</section>
 	{{/if}}
 
-	<section class="section section-information">
-		<h2 class="section-title">Information</h2>
+	<section class="section section-basics">
+		<h2 class="section-title sidebar-title">Information</h2>
 		{{#location}}
-		<section class="location">
+		<section id="location">
+			<i class="fa-solid fa-location-dot"></i>
 			{{#if city}}
-			<p class="city">{{city}},</p>
+			<span class="city">{{city}},</span>
 			{{/if}}
 			{{#if countryCode}}
-			<p class="countryCode">({{countryCode}})</p>
+			<span class="countryCode">({{countryCode}})</span>
 			{{/if}}
 		</section>
 		{{/location}}
 
-		{{#birthDate birth}}
+		{{#birthDate}}
+		<section id="birthDate">
+			<i class="fa-solid fa-calendar"></i>
+			{{#if birthDate}}
+			<span class="birthDate">{{birthDate}}</span>
+			{{/if}}
+		</section>
 		{{/birthDate}}
 
-
 		<section id="contact">
-			{{#if website}}
-			<div class="website">
-				<p class="fa-solid fa-up-right-from-square"></p>
-				<a class="hide-href-print" target="_blank" target="_blank" href="{{website}}">{{website}}</a>
-			</div>
-			{{/if}}
 			{{#if email}}
 			<div class="email">
-				<p class="fa-regular fa-envelope"></p>
+				<i class="fa-regular fa-envelope"></i>
 				<a class="hide-href-print" href="mailto:{{email}}">{{email}}</a>
 			</div>
 			{{/if}}
 			{{#if phone}}
 			<div class="phone">
-				<p class="fa-solid fa-mobile-screen-button"></p>
+				<i class="fa-solid fa-mobile-screen-button"></i>
 				<a class="hide-href-print" href="tel:{{phone}}">{{phone}}</a>
+			</div>
+			{{/if}}
+			{{#if website}}
+			<div class="website">
+				<i class="fa-solid fa-up-right-from-square"></i>
+				<a class="hide-href-print" target="_blank" target="_blank" href="{{website}}">{{website}}</a>
 			</div>
 			{{/if}}
 		</section>
@@ -50,7 +56,7 @@
 			<div class="item">
 				{{#if network}}
 				<div class="username">
-					<p class="fa-brands fa-{{spaceToDash network}} {{spaceToDash network}} social"></p>
+					<i class="fa-brands fa-{{spaceToDash network}} {{spaceToDash network}} social"></i>
 					{{#if url}}
 					<a target="_blank" href="{{url}}"><span class="show-only-url-print">{{username}}</span></a>
 					{{else}}

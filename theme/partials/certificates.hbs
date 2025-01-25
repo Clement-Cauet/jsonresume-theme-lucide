@@ -1,6 +1,6 @@
 {{#if resume.certificates.length}}
-<section id="certificates" class="section">
-    <h2 class="section-title">Certificates</h2>
+<section id="certificates" class="section section-certificates">
+    <h2 class="section-title sidebar-title">Certificates</h2>
     {{#each resume.certificates}}
     <div class="certificate-item">
         {{#if date}}
@@ -21,7 +21,7 @@
             {{/if}}
         </div>
         {{#if url}}
-        <span class="fa-solid fa-up-right-from-square"></span>
+        <i class="fa-solid fa-up-right-from-square"></i>
         <a target="_blank" href="{{url}}">{{url}}</a>
         {{/if}}
     </div>

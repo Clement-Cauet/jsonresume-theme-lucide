@@ -1,6 +1,6 @@
 {{#if resume.volunteer.length}}
-<section id="volunteer" class="section volunteer">
-    <h2 class='section-title'>Volunteer Experience</h2>
+<section id="volunteer" class="section section-volunteer">
+    <h2 class="section-title content-title">Volunteer Experience</h2>
     {{#each resume.volunteer}}
     <section class="section-item">
         <div id="volunteer-header" class="section-header">
@@ -9,21 +9,21 @@
             </div>
             <div>
                 {{#if position}}
-                <p class="position">{{position}}</p>
+                <h3 class="section-subtitle">{{position}}</h3>
                 {{/if}}
-                <p class="organization">
+                <div class="section-information">
                     {{#if website}}
                     <a target="_blank" href="{{website}}">{{organization}}</a>
                     {{else}}
-                    {{organization}}
+                    <span>{{organization}}</span>
                     {{/if}}
                     {{#if location}}
                     <span class="location">
-                        <span class="fa-solid fa-location-dot"></span>
+                        <i class="fa-solid fa-location-dot"></i>
                         {{location}}
                     </span>
                     {{/if}}
-                </p>
+                </div>
             </div>
         </div>
         <div id="volunteer-container" class="section-container">

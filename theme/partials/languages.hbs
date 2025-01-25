@@ -1,17 +1,18 @@
 {{#if resume.languages.length}}
-<section id="languages" class="section">
-    <h2 class='section-title'>Languages</h2>
+<section id="languages" class="section section-languages">
+    <h2 class="section-title sidebar-title">Languages</h2>
     {{#each resume.languages}}
-    <div class="display">
+    <div>
         {{#if language}}
-        <p class="language">
+        <span>
             {{language}}
-        </p>
+        </span>
         {{/if}}
+        <span> : </span>
         {{#if fluency}}
-        <p class="fluency">
+        <span>
             {{fluency}}
-        </p>
+        </span>
         {{/if}}
         <div class="bar"></div>
     </div>

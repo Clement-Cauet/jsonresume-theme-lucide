@@ -1,6 +1,6 @@
 {{#if resume.projects.length}}
-<section id="projects" class="section projects">
-    <h2 class='section-title'>Projects</h2>
+<section id="projects" class="section section-projects">
+    <h2 class="section-title content-title">Projects</h2>
     {{#each resume.projects}}
     <section class="section-item">
         <div id="projects-header" class="section-header">
@@ -8,19 +8,20 @@
                 {{> date startDate=startDate endDate=endDate }}
             </div>
             <div>
-                <p class="project">
+                {{#if name}}
+                <h3 class="section-subtitle">{{name}}</h3>
+                {{/if}}
+                <div class="section-information">
                     {{#if url}}
-                    <a target="_blank" href="{{url}}">{{name}}</a>
-                    {{else}}
-                    {{name}}
+                    <a target="_blank" href="{{url}}">{{url}}</a>
                     {{/if}}
                     {{#if location}}
                     <span class="location">
-                        <span class="fa-solid fa-location-dot"></span>
+                        <i class="fa-solid fa-location-dot"></i>
                         {{location}}
                     </span>
                     {{/if}}
-                </p>
+                </div>
             </div>
         </div>
         <div id="projects-container" class="section-container">
