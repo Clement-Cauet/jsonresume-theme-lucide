@@ -1,8 +1,14 @@
 {
-  "name": "jsonresume-theme-stackoverflow",
-  "version": "2.1.0",
-  "description": "Stack Overflow theme for JSON Resume",
-  "author": "Francesco Esposito",
+  "name": "jsonresume-theme-lucide",
+  "version": "1.0.0",
+  "description": "Lucide theme for JSON Resume",
+  "author": "Clement Cauet",
+  "keywords": [
+    "json",
+    "resume",
+    "jsonresume",
+    "json-resume"
+  ],
   "scripts": {
     "test": "jest --coverage --verbose",
     "updateTestSnapshots": "jest --updateSnapshot",
@@ -12,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-stackoverflow"
+    "url": "https://github.com/Clement-Cauet/jsonresume-theme-lucide"
   },
   "license": "MIT",
   "main": "index.js",
