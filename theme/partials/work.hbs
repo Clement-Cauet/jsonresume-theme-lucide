@@ -9,21 +9,21 @@
             </div>
             <div>
                 {{#if position}}
-                <p class="position">{{position}}</p>
+                <h3 class="section-subtitle">{{position}}</h3>
                 {{/if}}
-                <p class="company">
+                <div class="section-information">
                     {{#if website}}
                     <a target="_blank" href="{{website}}">{{name}}</a>
                     {{else}}
-                    {{name}}
+                    <span>{{name}}</span>
                     {{/if}}
                     {{#if location}}
-                    <span class="location">
+                    <span>
                         <span class="fa-solid fa-location-dot"></span>
                         {{location}}
                     </span>
                     {{/if}}
-                </p>
+                </div>
             </div>
         </div>
         <div id="work-container" class="section-container">

@@ -8,14 +8,22 @@
                 {{> date startDate=startDate endDate=endDate }}
             </div>
             <div>
-                <p>
+                <h3 class="section-subtitle">
                     {{#if studyType}}{{studyType}}{{/if}}
                     {{#if studyType}} en {{/if}}
                     {{#if area}}{{area}}{{/if}}
-                </p>
-                {{#if institution}}
-                <p class="institution">{{institution}}</p>
-                {{/if}}
+                </h3>
+                <div class="section-information">
+                    {{#if institution}}
+                    <span>{{institution}}</span>
+                    {{/if}}
+                    {{#if location}}
+                    <span>
+                        <span class="fa-solid fa-location-dot"></span>
+                        {{location}}
+                    </span>
+                    {{/if}}
+                </div>
             </div>
         </div>
         <div id="education-container" class="section-container">
