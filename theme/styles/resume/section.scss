@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section span,
+.section p,
+.section a,
+.section ul,
+.section blockquote {
+    margin: 0;
+    font-size: $font-size-small;
+    text-decoration: none;
+}
+
+.section code {
+    font-size: 0.5rem;
+}
+
+.section-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    gap: 0.5em;
+}
+
+.section-item:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+}
+
+.section-header {
+    display: grid;
+    grid-template-columns: minmax(10rem, auto) 1fr;
+    margin-bottom: 0.5em;
+    gap: 0.5em;
+}
+
+.section-subtitle {
+    font-size: $font-size-medium;
+    font-weight: bold;
+    margin: 0 0 0.2em;
+}
+
+.section-information {
+    display: grid;
+    grid-template-columns: minmax(10rem, auto) 1fr;
+}
+
+.section-information span,
+.section-information p,
+.section-information a {
+    color: $primary-color;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.section-image {
+    width: 12em;
+    height: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-image > img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: solid 2px white;
+    margin: auto;
+    
+    @include box-shadow(
+        0 0.5em 1em -0.125em hsla(221deg, 14%, 4%, 0.1),
+        0 0 0 1px hsla(221deg, 14%, 4%, 0.02)
+    );
+}

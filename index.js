@@ -24,7 +24,7 @@ Handlebars.registerHelper('nameSplit', nameSplit);
 Handlebars.registerHelper('eq', function (a, b) { return a === b; });
 
 function render(resume) {
-  const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
+  const style = readFileSync(`${__dirname}/theme/.config/styles/style.css`, 'utf-8');
   const template = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
   const partialsDir = join(__dirname, 'theme/partials');
   const filenamePartial = readdirSync(partialsDir);
@@ -39,7 +39,7 @@ function render(resume) {
   });
 
   return Handlebars.compile(template)({
-    css,
+    style,
     resume,
   });
 }

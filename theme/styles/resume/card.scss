@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card-container {
+    flex: none;
+    width: 30%;
+    padding: 0.5em;
+}
+
+.card {
+    position: relative;
+    max-width: 100%;
+    background-color: $background-color;
+    border-radius: 0.75em;
+    
+    @include box-shadow(
+        0 0.5em 1em -0.125em hsla(221deg, 14%, 4%, 0.1),
+        0 0 0 1px hsla(221deg, 14%, 4%, 0.02)
+    );
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+    padding: 0.5rem;
+    
+    @include box-shadow(
+        0 0.5em 1em -0.125em hsla(221deg, 14%, 4%, 0.1),
+        0 0 0 1px hsla(221deg, 14%, 4%, 0.02)
+    );
+}
+
+.card-content {
+    padding: 0.5em;
+}
+
+.card-title {
+    font-size: $font-size-small;
+    font-weight: bold;
+    margin: 0;
+}

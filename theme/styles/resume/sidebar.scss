@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.sidebar {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    margin: 1em 0 1em 1em;
+    border-radius: 0.75em;
+    padding: 0.5rem;
+    gap: 1em;
+    
+    @include box-shadow(
+        0 0.5em 1em -0.125em hsla(221deg, 14%, 4%, 0.1),
+        0 0 0 1px hsla(221deg, 14%, 4%, 0.02)
+    );
+}
+
+.sidebar-title {
+    color: $font-color-secondary;
+}
+
+.sidebar span,
+.sidebar p,
+.sidebar a,
+.sidebar i,
+.sidebar ul,
+.sidebar blockquote {
+    font-size: $font-size-regular;
+    color: $font-color-secondary;
+}

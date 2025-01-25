@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+    grid-column: 4 / 11;
+    margin-bottom: 1em;
+}
+
+.header h1 {
+    color: $primary-color;
+}
+
+.header h2 {
+    font-size: $font-size-medium;
+    padding: 0 0.5em;
+    margin: 0;
+}

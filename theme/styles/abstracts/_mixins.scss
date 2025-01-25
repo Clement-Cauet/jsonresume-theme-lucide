@@ -1,0 +1,3 @@
+@mixin box-shadow($shadows...) {
+    box-shadow: $shadows;
+}

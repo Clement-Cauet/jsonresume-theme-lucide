@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.content {
+    grid-column: 4 / 11;
+    padding: 1em;
+}
+
+.content-title {
+    color: $primary-color;
+}
+
+.section-basics,
+.section-awards,
+.section-certificates,
+.section-publications,
+.section-languages,
+.section-interests,
+.section-references {
+    padding-top: 0.5em;
+    color: $font-color-secondary;
+    border-top: 2px solid white;
+}
+
+.section-basics {
+    gap: 0.5em;
+}
+
+.section-work,
+.section-skills,
+.section-education,
+.section-volunteer,
+.section-projects {
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+    border-top: 2px solid $primary-color;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
