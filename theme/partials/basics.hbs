@@ -7,7 +7,7 @@
 	{{/if}}
 
 	<section class="section section-basics">
-		<h2 class="section-title sidebar-title">Information</h2>
+		<h2 class="section-title sidebar-title">INFORMATIONS</h2>
 		{{#location}}
 		<section id="location">
 			<i class="fa-solid fa-location-dot"></i>
@@ -30,16 +30,16 @@
 		{{/birthDate}}
 
 		<section id="contact">
-			{{#if email}}
-			<div class="email">
-				<i class="fa-regular fa-envelope"></i>
-				<a class="hide-href-print" href="mailto:{{email}}">{{email}}</a>
-			</div>
-			{{/if}}
 			{{#if phone}}
 			<div class="phone">
 				<i class="fa-solid fa-mobile-screen-button"></i>
 				<a class="hide-href-print" href="tel:{{phone}}">{{phone}}</a>
+			</div>
+			{{/if}}
+			{{#if email}}
+			<div class="email">
+				<i class="fa-regular fa-envelope"></i>
+				<a class="hide-href-print" href="mailto:{{email}}">{{email}}</a>
 			</div>
 			{{/if}}
 			{{#if website}}
