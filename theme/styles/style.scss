@@ -9,7 +9,7 @@
 
 body {
     font-family: Indivisa Text Sans-Regular, sans-serif;
-    margin: 50px 0 100px;
+    margin: 0;
     padding: 0;
     background-color: $secondary-color;
 }
@@ -22,7 +22,7 @@ h1 {
 
 #resume {
     width: 210mm;
-    min-height: 297mm;
+    min-height: 283mm;
     margin: auto;
     background-color: $background-color;
     display: grid;
