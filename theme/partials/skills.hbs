@@ -3,31 +3,33 @@
     <h2 class="section-title content-title">COMPETENCES</h2>
     <div class="skills-container">
         {{#each resume.skills}}
-        <div class="card-container">
-            <div class="card skills-item">
-                <div class="card-header">
-                    {{#if name}}
-                    <h3 class="card-title">{{name}}</h3>
-                    {{/if}}
-                    {{#if level}}
-                    <div class="level {{toLowerCase level}}">
-                        <p class="level">{{level}}</p>
-                        <div class="bar"></div>
+            {{#unless (eq name "Soft Skills")}}
+            <div class="card-container">
+                <div class="card skills-item">
+                    <div class="card-header">
+                        {{#if name}}
+                        <h3 class="card-title">{{name}}</h3>
+                        {{/if}}
+                        {{#if level}}
+                        <div class="level {{toLowerCase level}}">
+                            <p class="level">{{level}}</p>
+                            <div class="bar"></div>
+                        </div>
+                        {{/if}}
                     </div>
-                    {{/if}}
-                </div>
-                <div class="card-content">
-                    {{#if keywords.length}}
-                    <ul class="list-tags">
-                        {{#each keywords}}
-                        <li class="tag"><code>{{.}}</code></li>
-                        {{/each}}
-                    </ul>
-                    {{/if}}
+                    <div class="card-content">
+                        {{#if keywords.length}}
+                        <ul class="list-tags">
+                            {{#each keywords}}
+                            <li class="tag"><code>{{.}}</code></li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </div>
                 </div>
             </div>
-        </div>
-    {{/each}}
+            {{/unless}}
+        {{/each}}
     </div>
 </section>
 {{/if}}
