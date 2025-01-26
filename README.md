@@ -71,21 +71,21 @@ This theme uses SCSS for easy customization of styles. You can modify the SCSS f
 
 Please note that all the [Font awesome brands icons](https://fontawesome.com/search?s=brands) are supported. Although only the ones listed below have a color code associated with it in my CSS file:
 
-- <i class="fa-brands fa-github"></i> GitHub
-- <i class="fa-brands fa-stack-overflow"></i> Stack Overflow
-- <i class="fa-brands fa-linkedin"></i> LinkedIn
-- <i class="fa-brands fa-dribbble"></i> Dribbble
-- <i class="fa-brands fa-twitter"></i> Twitter
-- <i class="fa-brands fa-facebook"></i> Facebook
-- <i class="fa-brands fa-pinterest"></i> Pinterest
-- <i class="fa-brands fa-instagram"></i> Instagram
-- <i class="fa-brands fa-soundcloud"></i> SoundCloud
-- <i class="fa-brands fa-wordpress"></i> WordPress
-- <i class="fa-brands fa-youtube"></i> YouTube
-- <i class="fa-brands fa-flickr"></i> Flickr
-- <i class="fa-brands fa-google-plus"></i> Google Plus
-- <i class="fa-brands fa-tumblr"></i> Tumblr
-- <i class="fa-brands fa-foursquare"></i> Foursquare
+- GitHub
+- Stack Overflow
+- LinkedIn
+- Dribbble
+- Twitter
+- Facebook
+- Pinterest
+- Instagram
+- SoundCloud
+- WordPress
+- YouTube
+- Flickr
+- Google Plus
+- Tumblr
+- Foursquare
 
 To have a social icon close the social link profile (or username) it is enough to set a `network` the name of the Social Network (ex: 'Stack Overflow').
 
