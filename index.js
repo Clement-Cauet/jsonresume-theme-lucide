@@ -11,12 +11,13 @@ const { toLowerCase } = require(join(HELPERS, 'to-lower-case.js'));
 const { spaceToDash } = require(join(HELPERS, 'space-to-dash.js'));
 const { nameSplit } = require(join(HELPERS, 'name-split.js'));
 
-const { MY, Y, DMY } = dateHelpers;
+const { DMY, MY, Y, duration } = dateHelpers;
 
 Handlebars.registerHelper('birthDate', birthDate);
+Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('MY', MY);
 Handlebars.registerHelper('Y', Y);
-Handlebars.registerHelper('DMY', DMY);
+Handlebars.registerHelper('duration', duration);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);

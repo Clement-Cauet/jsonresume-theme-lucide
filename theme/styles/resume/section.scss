@@ -17,7 +17,7 @@
 .section ul,
 .section blockquote {
     margin: 0;
-    font-size: $font-size-small;
+    font-size: $font-size-light;
     text-decoration: none;
 }
 
@@ -28,7 +28,7 @@
 .section-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
     gap: 0.5em;
 }
 
@@ -45,8 +45,13 @@
 .section-header {
     display: grid;
     grid-template-columns: minmax(10rem, auto) 1fr;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     gap: 0.5em;
+}
+
+.section-date {
+    display: flex;
+    flex-direction: column;
 }
 
 .section-subtitle {

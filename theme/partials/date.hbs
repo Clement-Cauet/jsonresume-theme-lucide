@@ -1,13 +1,16 @@
 {{#if startDate}}
   <code class="date">
     {{#if endDate}}
-      {{#if (eq (Y startDate) (Y endDate))}}
-        <span>{{Y startDate}}</span>
+      {{#if (eq (MY startDate) (MY endDate))}}
+        <span>{{MY startDate}}</span>
       {{else}}
-        <span>{{Y startDate}} - {{Y endDate}}</span>
+        <span>{{MY startDate}} - {{MY endDate}}</span>
       {{/if}}
     {{else}}
-      <span>{{Y startDate}} - Aujourd'hui</span>
+      <span>{{MY startDate}} - Aujourd'hui</span>
     {{/if}}
+  </code>
+  <code class="date">
+    <span>{{duration startDate endDate}}</span>
   </code>
 {{/if}}
