@@ -4,7 +4,7 @@
 .section {
     display: flex;
     flex-direction: column;
-    margin: 0.5em;
+    margin: 0.25em;
 }
 
 .section:last-child {
@@ -54,7 +54,9 @@
     flex-direction: column;
 }
 
-.section-subtitle {
+.section-subtitle,
+.section-subtitle a {
+    color: $font-color-primary;
     font-size: $font-size-medium;
     font-weight: bold;
     margin: 0 0 0.2em;
@@ -77,14 +79,14 @@
     gap: 0.5em;
 }
 
-.section-image {
-    width: 12em;
-    height: 12em;
+.section-picture {
+    width: 10em;
+    height: 10em;
     margin-left: auto;
     margin-right: auto;
 }
 
-.section-image > img {
+.section-picture > img {
     width: 90%;
     height: 90%;
     border-radius: 50%;

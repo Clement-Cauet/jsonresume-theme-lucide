@@ -16,13 +16,13 @@ body {
 
 h1 {
     font-size: $font-size-large;
-    margin: 0 0 0.5em;
+    margin: 0 0 0.25em;
     line-height: 1;
 }
 
 #resume {
     width: 210mm;
-    min-height: 275mm;
+    height: 275mm;
     margin: auto;
     background-color: $background-color;
     display: grid;
@@ -52,7 +52,8 @@ h1 {
     align-items: center;
     display: inline-flex;
     height: 1.5em;
-    font-size: 0.6rem;
+    font-size: $font-size-small;
+    color: $font-color-primary;
     justify-content: center;
     padding-left: 0.7em;
     padding-right: 0.7em;
@@ -62,5 +63,6 @@ h1 {
 }
 
 .keyword {
-    font-size: $font-size-regular;
+    font-size: $font-size-light;
+    color: $font-color-secondary;
 }

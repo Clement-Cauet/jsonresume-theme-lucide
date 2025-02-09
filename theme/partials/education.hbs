@@ -1,6 +1,6 @@
 {{#if resume.education.length}}
 <section id="education" class="section section-education">
-    <h2 class="section-title content-title">FORMATIONS</h2>
+    <h2 class="section-title content-title">FORMATION</h2>
     {{#each resume.education}}
     <section class="section-item">
         <div id="education-header" class="section-header">
@@ -14,7 +14,9 @@
                     {{#if area}}{{area}}{{/if}}
                 </h3>
                 <div class="section-information">
-                    {{#if institution}}
+                    {{#if website}}
+                    <a target="_blank" href="{{website}}">{{institution}}</a>
+                    {{else}}
                     <span>{{institution}}</span>
                     {{/if}}
                     {{#if location}}

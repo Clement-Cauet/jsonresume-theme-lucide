@@ -1,0 +1,57 @@
+<section class="section section-informations">
+    <section id="basics" class="section section-basics">
+        {{#location}}
+        <i class="fa-solid fa-location-dot"></i>
+        {{#if city}}
+        <span class="city">{{city}},</span>
+        {{/if}}
+        {{#if countryCode}}
+        <span class="countryCode">({{countryCode}})</span>
+        {{/if}}
+        {{/location}}
+        {{#if birthDate}}
+        <i class="fa-solid fa-calendar"></i>
+        <span class="birthDate">{{birthDate}}</span>
+        {{/if}}
+    </section>
+
+    <section id="contact" class="section section-contact">
+        {{#if phone}}
+        <div class="phone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <a class="hide-href-print" href="tel:{{phone}}">{{phone}}</a>
+        </div>
+        {{/if}}
+        {{#if email}}
+        <div class="email">
+            <i class="fa-regular fa-envelope"></i>
+            <a class="hide-href-print" href="mailto:{{email}}">{{email}}</a>
+        </div>
+        {{/if}}
+        {{#if website}}
+        <div class="website">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            <a class="hide-href-print" target="_blank" href="{{website}}">{{website}}</a>
+        </div>
+        {{/if}}
+    </section>
+
+    {{#if profiles.length}}
+    <section id="profiles" class="section section-profiles">
+        {{#each profiles}}
+        <div class="item">
+            {{#if network}}
+            <div class="username">
+                <i class="fa-brands fa-{{spaceToDash network}} {{spaceToDash network}} social"></i>
+                {{#if url}}
+                <a target="_blank" href="{{url}}"><span class="show-only-url-print">{{username}}</span></a>
+                {{else}}
+                <span>{{username}}</span>
+                {{/if}}
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </section>
+    {{/if}}
+</section>

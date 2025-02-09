@@ -4,29 +4,18 @@
     {{#each resume.projects}}
     <section class="section-item">
         <div id="projects-header" class="section-header">
-            <div>
+            <div class="section-date">
                 {{> date startDate=startDate endDate=endDate }}
             </div>
             <div>
                 {{#if name}}
-                <h3 class="section-subtitle">{{name}}</h3>
+                <h3 class="section-subtitle"><a target="_blank" href="{{url}}">{{name}}</a></h3>
                 {{/if}}
-                <div class="section-information">
-                    {{#if url}}
-                    <a target="_blank" href="{{url}}">{{url}}</a>
-                    {{/if}}
-                    {{#if location}}
-                    <span class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {{location}}
-                    </span>
-                    {{/if}}
-                </div>
             </div>
         </div>
         <div id="projects-container" class="section-container">
-            {{#if summary}}
-            <div class="summary">{{paragraphSplit summary}}</div>
+            {{#if description}}
+            <div class="description">{{paragraphSplit description}}</div>
             {{/if}}
             {{#if highlights.length}}
             <ul class="highlights">

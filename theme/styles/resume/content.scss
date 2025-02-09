@@ -10,15 +10,20 @@
     color: $primary-color;
 }
 
-.section-basics,
+.section-informations p,
+.section-informations span,
+.section-informations a {
+    color: $font-color-primary;
+}
+
 .section-awards,
 .section-certificates,
 .section-publications,
+.section-skills,
 .section-languages,
 .section-interests,
 .section-references {
     padding-top: 0.5em;
-    color: $font-color-secondary;
     border-top: 2px solid white;
 }
 
@@ -26,12 +31,29 @@
     gap: 0.5em;
 }
 
+.section-basics,
+.section-contact,
+.section-profiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0;
+}
+
+.section-basics > div,
+.section-contact > div,
+.section-profiles > div {
+    width: fit-content;
+    gap: 0.5em;
+}
+
+.section-informations,
 .section-work,
-.section-skills,
 .section-education,
 .section-volunteer,
 .section-projects {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding-top: 0.5em;
     border-top: 2px solid $primary-color;
 }
